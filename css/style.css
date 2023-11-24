@@ -1,0 +1,246 @@
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #ECECEC;
+  font-family: "Lato", sans-serif;
+}
+html body a {
+  color: #ECECEC;
+  text-decoration: none;
+}
+html body h1 {
+  color: #D32F2F;
+}
+html body h2, html body label {
+  color: #689F31;
+}
+html body p {
+  color: #333333;
+}
+html body img {
+  object-fit: cover;
+  object-position: center;
+}
+html body header {
+  background: #689F31;
+  color: #fff;
+  padding: 10px 20px;
+}
+html body header .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+html body header .menu .logo h1 {
+  color: #ECECEC;
+  font-size: 2rem;
+}
+html body header .menu .menu-lista ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+html body header .menu .menu-lista ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+html body header .menu .menu-lista ul li a:hover {
+  text-decoration: underline;
+}
+html body header .menu .mobile-menu-icon {
+  display: none;
+}
+html body header .menu .mobile-menu-icon button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+html body header .menu .mobile-menu-icon button .bar {
+  background: #fff;
+  height: 3px;
+  width: 25px;
+  margin: 5px 0;
+}
+html body header .mobile-menu {
+  display: none;
+}
+html body header .mobile-menu ul {
+  list-style: none;
+  padding: 0;
+}
+html body header .mobile-menu ul li {
+  padding: 10px 0;
+  border-top: 1px solid #fff;
+}
+html body header .mobile-menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+html body header .open {
+  display: block;
+}
+@media (max-width: 768px) {
+  html body header .menu .menu-lista {
+    display: none;
+  }
+  html body header .menu .mobile-menu-icon {
+    display: block;
+  }
+  html body header .menu .mobile-menu {
+    display: block;
+  }
+}
+html body main {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 20px;
+}
+html body main .grid {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+}
+html body main .grid .main-img {
+  width: 95%;
+  height: 60%;
+}
+html body main .grid .introduction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+html body main .grid .introduction h1 {
+  font-size: 2.5rem;
+}
+html body main .grid .introduction p {
+  font-size: 1.4rem;
+  padding: 25px;
+}
+html body main .grid a {
+  padding: 10px 20px;
+  background-color: #689F31;
+  float: right;
+  margin-right: 65px;
+  border-radius: 3px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.45);
+  transition: 0.3s;
+}
+html body main .grid a:hover {
+  background-color: #D32F2F;
+}
+html body main .aside {
+  border: 1px solid #333333;
+  border-radius: 2px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+html body main .aside .div-aside-border,
+html body main .aside .div-aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+html body main .aside .div-aside-border {
+  border-bottom: 1px solid #333333;
+}
+html body main .cards {
+  margin-top: -140px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+html body main .cards .card {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  gap: 10px;
+  transition: 0.2s;
+}
+html body main .cards .card .card-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+html body main .cards .card .card-texto h2 {
+  font-size: 1.4rem;
+}
+html body main .cards .card .card-texto p {
+  font-size: 1.1rem;
+}
+html body main .cards:hover > :not(:hover) {
+  opacity: 0.5;
+  transform: scale(0.98);
+}
+@media (max-width: 1590px) {
+  html body main .cards {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 1340px) {
+  html body main .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1024px) {
+  html body main .grid {
+    display: flex;
+    flex-direction: column;
+  }
+  html body main .grid .main-img {
+    width: 100%;
+  }
+  html body main .grid .aside {
+    margin: 40px 0;
+  }
+  html body main .cards {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 580px) {
+  html body main .grid .section1 p {
+    margin-top: -45px;
+    padding: 15px 0;
+  }
+  html body main .grid .section1 .saiba-mais {
+    float: right;
+  }
+  html body main .grid .section1 .saiba-mais a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+  html body main .grid .section1 .introduction {
+    flex-direction: column;
+    align-items: start;
+  }
+  html body main .section3 .cards .card {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  html body main .section3 .cards .card img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 375px) {
+  html body main .introduction p {
+    width: 100%;
+  }
+  html body main .section1 a {
+    margin-right: 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
